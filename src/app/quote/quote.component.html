@@ -1,0 +1,39 @@
+<div class="container form">
+    <h1 class="text-center">Quote</h1>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+</div>
+<hr />
+<div class="container">
+    <div *ngFor="let quote of checkHighestUpvote(); let i = index">
+        <div class="card mb-4">
+            <div class="card-header">
+                <app-quote-header [quote]="quote" (quoteDelete)="deleteQuote($event, i)" (quoteUpvote)="upvoteQuote(i)" (quoteDownvote)="downvoteQuote(i)"></app-quote-header>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p appHighlightHigestVote *ngIf="
+                i == 0 &&
+                quote.upVotes === setHighest().upVotes &&
+                quote.upVotes > 0
+              ">
+                        <span>
+                <fa-icon [icon]="faQuoteLeft"></fa-icon>
+              </span> {{ quote.quote }}
+                        <span>
+                <fa-icon [icon]="faQuoteRight"></fa-icon>
+              </span>
+                    </p>
+                    <p *ngIf="setHighest().id !== quote.id || quote.upVotes === 0">
+                        <span>
+                <fa-icon [icon]="faQuoteLeft"></fa-icon>
+              </span> {{ quote.quote }}
+                        <span>
+                <fa-icon [icon]="faQuoteRight"></fa-icon>
+              </span>
+                    </p>
+                    <app-quote-footer [quote]="quote"></app-quote-footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
