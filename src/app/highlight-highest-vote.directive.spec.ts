@@ -1,6 +1,6 @@
-import { HighlightHighestVoteDirective } from './highlight-higest-vote.directive';
+import { HighlightHighestVoteDirective } from './highlight-highest-vote.directive';
 
-describe('HighlightHigestVoteDirective', () => {
+describe('HighlightHighestVoteDirective', () => {
   it('should create an instance', () => {
     const directive = new HighlightHighestVoteDirective();
     expect(directive).toBeTruthy();

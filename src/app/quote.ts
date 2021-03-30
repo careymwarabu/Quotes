@@ -13,3 +13,4 @@ export class Quote {
     this.downVotes = 0;
   }
 }
+

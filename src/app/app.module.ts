@@ -6,18 +6,17 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
-import { HighlightHighestVotesDirective } from './highlight-highest-votes.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFooterComponent } from './quote-footer/quote-footer.component';
 import { QuoteHeaderComponent } from './quote-header/quote-header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+// import { AppQuote} from '../app';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteFormComponent,
-    HighlightHighestVotesDirective,
     DateCountPipe,
     QuoteFooterComponent,
     QuoteHeaderComponent,
@@ -27,3 +26,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

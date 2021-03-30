@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quote} from  '../quote';
 import {
   faThumbsDown,
   faThumbsUp,
   faTrashAlt,
 }
- from 
-import { Quote } from '../quote';
+ from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-quote-header',
